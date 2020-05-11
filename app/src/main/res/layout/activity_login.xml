@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".Login">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:fontFamily="monospace"
+        android:text="Log In"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linlayboxLOGIN"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gandhi"
+            android:text="Intender"
+            android:textColor="#FFFFFF"
+            android:textSize="75dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linlayboxLOGIN"
+        android:layout_width="357dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/logEmail"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:fontFamily="@font/gandhi"
+            android:hint="Email"
+            android:inputType="textWebEmailAddress"
+            android:textColorHint="#FFFFFF"></EditText>
+
+        <EditText
+            android:id="@+id/logPass"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:fontFamily="@font/gandhi"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="#FFFFFF">
+
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linlayboxLOGIN"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_marginTop="120dp">
+
+        <Button
+            android:id="@+id/Lcont"
+            android:layout_width="218dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:elevation="8dp"
+            android:fontFamily="@font/gandhi"
+            android:shadowColor="@color/colorPrimaryDark"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            android:visibility="visible"
+            tools:ignore="InvalidId"
+            tools:visibility="visible"></Button>
+    </LinearLayout>
+
+
+</RelativeLayout>

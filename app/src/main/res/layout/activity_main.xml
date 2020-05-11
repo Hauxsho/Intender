@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="#0E0E0E"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/custom_button"
+        android:elevation="8dp"
+        android:fontFamily="@font/gandhi"
+        android:gravity="center"
+        android:text="Log Out"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="307dp"
+        tools:layout_editor_absoluteY="667dp"
+        tools:ignore="MissingConstraints"
+        android:onClick="logout">
+
+    </Button>
+
+    <com.lorentzos.flingswipe.SwipeFlingAdapterView
+        android:id="@+id/frame"
+        android:background="#ffeee9e2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rotation_degrees="15.5"
+        tools:context=".MyActivity" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

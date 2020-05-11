@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "37807648083",
+    "firebase_url": "https://intender-73414.firebaseio.com",
+    "project_id": "intender-73414",
+    "storage_bucket": "intender-73414.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37807648083:android:4c63617ff684a4b69785a6",
+        "android_client_info": {
+          "package_name": "com.example.intender"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37807648083-t440s9j78srqq2j0f8iqj55754tcqge7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.intender",
+            "certificate_hash": "95ba91c519556a2a6b92bd2d590361820877b412"
+          }
+        },
+        {
+          "client_id": "37807648083-m1v32c999k62tatkp1na7koe7hvllosn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWvi7GFVaT-8gKCuSYAw-JptkxG-CWRBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37807648083-m1v32c999k62tatkp1na7koe7hvllosn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

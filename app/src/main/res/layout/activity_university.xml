@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".University">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:fontFamily="monospace"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/linlayboxUNI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:hint="Enter University Name"
+            android:textColorHint="#FFFFFF"
+            android:textSize="50dp"
+            android:padding="5dp"></TextView>
+
+        <EditText
+            android:id="@+id/supUni"
+            android:layout_width="320dp"
+            android:textSize="30dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gandhi"
+            android:hint="University"
+            android:inputType="text"
+            android:paddingTop="40dp"
+            android:textColorHint="#FFFFFF"></EditText>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/Scont5"
+            android:layout_width="218dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/loginll"
+            android:background="@drawable/custom_button"
+            android:elevation="8dp"
+            android:fontFamily="@font/gandhi"
+            android:shadowColor="@color/colorPrimaryDark"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:ignore="InvalidId"
+            tools:visibility="visible"></Button>
+    </LinearLayout>
+
+</RelativeLayout>
