@@ -7,13 +7,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayAdapt extends ArrayAdapter<Cards> {
     Context context;
-    public ArrayAdapt(Context context, int resourceID, int text, List<Cards>items) {
+    public ArrayAdapt(Context context, int resourceID, List<Cards>items) {
         super(context,resourceID,items);
     }
 

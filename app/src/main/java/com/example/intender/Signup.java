@@ -90,10 +90,11 @@ import java.util.Objects;
                             DatabaseReference currentUserDb = FirebaseDatabase.getInstance().getReference().child("Users").child(genderFI).child(userId);
                             Map userInfo = new HashMap<>();
                             userInfo.put("name",nameFI);
-                            userInfo.put("birth",birthFI);
-                            userInfo.put("uni",uniFI);
+                            userInfo.put("birth", birthFI);
+                            userInfo.put("uni", uniFI);
                             userInfo.put("profileImageUrl", "default");
                             currentUserDb.updateChildren(userInfo);
+
                         }
                     }
                 });
