@@ -5,6 +5,7 @@
     package="com.example.intender">
 
     <dist:module dist:instant="true" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -14,12 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Photos"></activity>
+        <activity android:name=".Settings"></activity>
+        <activity android:name=".Photos" />
         <activity android:name=".University" />
         <activity android:name=".BirthDay" />
         <activity android:name=".Name" />
         <activity android:name=".MainActivity" />
-
         <activity android:name=".Choose">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Signup" />
         <activity android:name=".Login" />
         <activity android:name=".Gender" />

@@ -211,4 +211,10 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Signed Out", Toast.LENGTH_LONG).show();
         finish();
     }
+
+    public void settings(View view) {
+        Intent intent = new Intent(MainActivity.this ,Settings.class);
+        startActivity(intent);
+        Toast.makeText(this, "Settings", Toast.LENGTH_LONG).show();
+    }
 }
