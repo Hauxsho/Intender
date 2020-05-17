@@ -14,7 +14,8 @@
         android:gravity="center"
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        android:id="@+id/photolin">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -25,6 +26,7 @@
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:layout_margin="20sp"
+                android:id="@+id/picOne"
                 android:background="@mipmap/ic_launcher">
 
             </ImageView>
@@ -33,36 +35,14 @@
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:layout_margin="20sp"
+                android:id="@+id/picTwo"
                 android:background="@mipmap/ic_launcher"></ImageView>
 
             <ImageView
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:layout_margin="20sp"
-                android:background="@mipmap/ic_launcher"></ImageView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-
-            <ImageView
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_margin="20sp"
-                android:background="@mipmap/ic_launcher"></ImageView>
-
-            <ImageView
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_margin="20sp"
-                android:background="@mipmap/ic_launcher"></ImageView>
-
-            <ImageView
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_margin="20sp"
+                android:id="@+id/picThree"
                 android:background="@mipmap/ic_launcher"></ImageView>
         </LinearLayout>
 
@@ -75,20 +55,82 @@
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:layout_margin="20sp"
+                android:id="@+id/picFour"
                 android:background="@mipmap/ic_launcher"></ImageView>
 
             <ImageView
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:layout_margin="20sp"
+                android:id="@+id/picFive"
                 android:background="@mipmap/ic_launcher"></ImageView>
 
             <ImageView
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:layout_margin="20sp"
+                android:id="@+id/picSix"
+                android:background="@mipmap/ic_launcher"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_margin="20sp"
+                android:id="@+id/picSeven"
+                android:background="@mipmap/ic_launcher"></ImageView>
+
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_margin="20sp"
+                android:id="@+id/picEight"
+                android:background="@mipmap/ic_launcher"></ImageView>
+
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_margin="20sp"
+                android:id="@+id/picNine"
                 android:background="@mipmap/ic_launcher"></ImageView>
         </LinearLayout>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/uploadlin"
+        android:layout_below="@+id/photolin">
 
+        <Button
+            android:id="@+id/uploadphoto"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@drawable/custom_button"
+            android:text="Upload">
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/uploadlin">
+
+        <Button
+            android:id="@+id/conp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@drawable/custom_button"
+            android:text="Continue">
+
+        </Button>
+    </LinearLayout>
 </RelativeLayout>
