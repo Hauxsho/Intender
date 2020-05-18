@@ -59,8 +59,7 @@ import java.util.Objects;
                 final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null)
                 {
-                    Intent intent = new Intent(Signup.this,Photos.class);
-                    intent.putExtra("GENDERFPhotos",genderFI);
+                    Intent intent = new Intent(Signup.this,MainActivity.class);
                     startActivity(intent);
                     finish();
 

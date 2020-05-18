@@ -214,6 +214,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void settings(View view) {
         Intent intent = new Intent(MainActivity.this ,Settings.class);
+        final FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+        intent.putExtra("UserGen",userGender);
         startActivity(intent);
         Toast.makeText(this, "Settings", Toast.LENGTH_LONG).show();
     }
