@@ -1,12 +1,16 @@
 package com.example.intender;
 
 import android.content.Context;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class ArrayAdapt extends ArrayAdapter<Cards> {
@@ -24,7 +28,10 @@ public class ArrayAdapt extends ArrayAdapter<Cards> {
         TextView name = (TextView)convertView.findViewById(R.id.helloText);
         ImageView image = (ImageView)convertView.findViewById(R.id.swipeImage);
         name.setText(card_item.getName());
-        image.setImageResource(R.mipmap.ic_launcher);
+
+
+        Glide.with(getContext()).load(card_item.getImageprofileURL()).into(image);
+
         return convertView;
 }
 }

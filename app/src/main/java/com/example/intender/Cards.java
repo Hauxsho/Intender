@@ -2,10 +2,15 @@ package com.example.intender;
 
 public class Cards
 {
-    private String userID,name;
-    public Cards(String userID , String name) {
+    private String userID;
+    private String name;
+
+    private String imageprofileURL;
+
+    public Cards(String userID , String name ,String imageprofileURL) {
         this.userID = userID;
         this.name = name;
+        this.imageprofileURL=imageprofileURL;
     }
 
     public Cards() {
@@ -27,6 +32,15 @@ public class Cards
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getImageprofileURL() {
+        return imageprofileURL;
+    }
+
+    public void setImageprofileURL(String imageprofileURL) {
+        this.imageprofileURL = imageprofileURL;
+    }
+
 
 
 }

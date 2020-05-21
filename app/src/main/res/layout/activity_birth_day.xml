@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="#000000"
     tools:context=".BirthDay">
 
     <TextView
@@ -50,11 +50,13 @@
             android:padding="5dp"></TextView>
 
         <DatePicker
+            android:id="@+id/datep"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:datePickerMode="spinner"
+            android:background="#D9D9E2"
+
             android:calendarViewShown="false"
-            android:id="@+id/datep">
+            android:datePickerMode="spinner">
 
         </DatePicker>
 

@@ -18,28 +18,34 @@
         app:cardCornerRadius="4dp"
         android:elevation="2dp"
         android:id="@+id/CV">
-        <FrameLayout
+        <LinearLayout
             android:layout_width="400dp"
-            android:layout_height="400dp"
-            android:layout_gravity="center">
+            android:layout_height="600dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:weightSum="10">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/swipeImage">
+                android:id="@+id/swipeImage"
+                android:scaleType="centerCrop"
+                android:layout_weight="9">
 
             </ImageView>
-        <TextView
-        android:id="@+id/helloText"
-        android:textSize="40sp"
-        android:textColor="@android:color/black"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        tools:text="yo yo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
-    </FrameLayout>
+            <TextView
+                android:id="@+id/helloText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:textColor="@android:color/black"
+                android:textSize="40sp"
+                android:elevation="8dp"
+                android:layout_weight="1"
+                tools:text="yo yo" />
+
+        </LinearLayout>
 
 </androidx.cardview.widget.CardView>
 
