@@ -88,9 +88,18 @@ public class Settings extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists() && dataSnapshot.getChildrenCount() > 0) {
                     Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
-                    profileImageUrl = map.get("profileImageUrl").toString();
-                    if (profileImageUrl != null)
-                        Glide.with(getApplication()).load(profileImageUrl).into(mImageOne);
+
+                    if (map.get("profileImageUrl") != null) {
+                        profileImageUrl = map.get("profileImageUrl").toString();
+                        switch (profileImageUrl) {
+                            case "default":
+                                Glide.with(getApplication()).load(R.mipmap.ic_launcher).into(mImageOne);
+                                break;
+                            default:
+                                Glide.with(getApplication()).load(profileImageUrl).into(mImageOne);
+                                break;
+                        }
+                    }
                 }
             }
 

@@ -28,9 +28,16 @@ public class ArrayAdapt extends ArrayAdapter<Cards> {
         TextView name = (TextView)convertView.findViewById(R.id.helloText);
         ImageView image = (ImageView)convertView.findViewById(R.id.swipeImage);
         name.setText(card_item.getName());
+        switch (card_item.getImageprofileURL())
+        {
+            case "default":
+                Glide.with(getContext()).load(R.mipmap.ic_launcher).into(image);
+                break;
+            default:
+                    Glide.with(getContext()).load(card_item.getImageprofileURL()).into(image);
+                    break;
+        }
 
-
-        Glide.with(getContext()).load(card_item.getImageprofileURL()).into(image);
 
         return convertView;
 }

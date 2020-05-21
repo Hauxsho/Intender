@@ -182,7 +182,12 @@ public class MainActivity extends AppCompatActivity {
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 if(dataSnapshot.exists() && !dataSnapshot.child("connections").child("YUP").hasChild(currentuserId) && !dataSnapshot.child("connections").child("NOPE").hasChild(currentuserId))
                 {
-                    Cards Item = new Cards(dataSnapshot.getKey(),dataSnapshot.child("name").getValue().toString(),dataSnapshot.child("profileImageUrl").getValue().toString());
+                    String profileImageUrl="default";
+                    if(!dataSnapshot.child("profileImageUrl").getValue().toString().equals("default"))
+                    {
+                        profileImageUrl=dataSnapshot.child("profileImageUrl").getValue().toString();
+                    }
+                    Cards Item = new Cards(dataSnapshot.getKey(),dataSnapshot.child("name").getValue().toString(),profileImageUrl);
                     rowItems.add(Item);
                     arrayAdapt.notifyDataSetChanged();
                 }
