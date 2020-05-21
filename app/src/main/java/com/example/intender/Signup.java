@@ -87,10 +87,11 @@ import java.util.Objects;
                         }
                         else {
                             String userId = mAuth.getCurrentUser().getUid();
-                            DatabaseReference currentUserDb = FirebaseDatabase.getInstance().getReference().child("Users").child(genderFI).child(userId);
+                            DatabaseReference currentUserDb = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
                             Map userInfo = new HashMap<>();
                             userInfo.put("name",nameFI);
                             userInfo.put("birth", birthFI);
+                            userInfo.put("gender",genderFI);
                             userInfo.put("uni", uniFI);
                             userInfo.put("profileImageUrl", "default");
                             currentUserDb.updateChildren(userInfo);

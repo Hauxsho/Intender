@@ -37,7 +37,7 @@ public class Settings extends AppCompatActivity {
     private ImageView mImageOne;
     private DatabaseReference mUserDatabase;
     Intent intent;
-    private String userId, profileImageUrl, userGen = "Female";
+    private String userId, profileImageUrl;
 
 
     private Uri resultUri;
@@ -52,7 +52,7 @@ public class Settings extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         userId = mAuth.getCurrentUser().getUid();
-        mUserDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(userGen).child(userId).child("profileImageUrl");
+        mUserDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(userId).child("profileImageUrl");
         getUserInfo();
 
         mImageOne.setOnClickListener(new View.OnClickListener() {
