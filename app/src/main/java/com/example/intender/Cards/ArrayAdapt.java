@@ -1,7 +1,6 @@
-package com.example.intender;
+package com.example.intender.Cards;
 
 import android.content.Context;
-import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.intender.Cards.Cards;
+import com.example.intender.R;
 
 import java.util.List;
 

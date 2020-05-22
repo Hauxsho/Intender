@@ -15,8 +15,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:background="@drawable/custom_button"
         android:elevation="8dp"
         android:fontFamily="@font/gandhi"
@@ -26,10 +26,31 @@
         android:textAllCaps="false"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="0dp">
 
     </Button>
+
+    <Button
+        android:id="@+id/matches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/custom_button"
+        android:elevation="8dp"
+        android:fontFamily="@font/gandhi"
+        android:gravity="center"
+        android:onClick="gotoMatches"
+        android:text="Matches"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/settings"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toEndOf="@+id/logout"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="0dp"></Button>
 
     <Button
         android:id="@+id/settings"
@@ -47,8 +68,10 @@
         android:textAllCaps="false"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
         app:layout_constraintStart_toEndOf="@+id/logout"
-        tools:ignore="MissingConstraints,OnClick">
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteY="0dp">
 
     </Button>
 

@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.intender.Cards.ArrayAdapt;
+import com.example.intender.Cards.Cards;
+import com.example.intender.Matches.Matches;
 import com.example.intender.R.layout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -196,5 +199,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this ,Settings.class);
         startActivity(intent);
         Toast.makeText(this, "Settings", Toast.LENGTH_LONG).show();
+    }
+
+    public void gotoMatches(View view) {
+        Intent intent = new Intent(MainActivity.this, Matches.class);
+        startActivity(intent);
     }
 }

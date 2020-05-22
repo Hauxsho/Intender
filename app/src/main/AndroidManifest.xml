@@ -5,8 +5,9 @@
     package="com.example.intender">
 
     <dist:module dist:instant="true" />
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Settings"></activity>
+        <activity android:name=".Matches.Matches"></activity>
+        <activity android:name=".Settings" />
         <activity android:name=".Photos" />
         <activity android:name=".University" />
         <activity android:name=".BirthDay" />

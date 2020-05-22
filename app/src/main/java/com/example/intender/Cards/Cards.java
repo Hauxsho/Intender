@@ -1,4 +1,4 @@
-package com.example.intender;
+package com.example.intender.Cards;
 
 public class Cards
 {
