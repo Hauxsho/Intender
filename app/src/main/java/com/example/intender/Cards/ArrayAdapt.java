@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.intender.Cards.Cards;
 import com.example.intender.R;
 
 import java.util.List;

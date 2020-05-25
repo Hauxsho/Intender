@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         usersDb = FirebaseDatabase.getInstance().getReference().child("Users");
         checkGender();
 
-        rowItems = new ArrayList<>();
+        rowItems = new ArrayList<Cards>();
 
         arrayAdapt = new ArrayAdapt(this, layout.item, rowItems);
 
@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 Cards obj = (Cards)dataObject;
                 String userid = obj.getUserID();
                 usersDb.child(userid).child("connections").child("YUP").child(currentuserId).setValue(true);
+                isConnectionMatch(userid);
                 Toast.makeText(MainActivity.this, "Right", Toast.LENGTH_SHORT).show();
             }
             @Override
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference currentUserConnectionDB = usersDb.child(currentuserId).child("connections").child("YUP").child(userid);
         currentUserConnectionDB.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()) {
                     Toast.makeText(MainActivity.this, "new connection", Toast.LENGTH_SHORT).show();
                     usersDb.child(dataSnapshot.getKey()).child("connections").child("Matches").child(currentuserId).setValue(true);
@@ -123,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         final FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
 
 
-        DatabaseReference userDB = usersDb.child(user.getUid());
+        DatabaseReference userDb = usersDb.child(user.getUid());
         usersDb.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -158,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
         usersDb.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                if (dataSnapshot.child("sex").getValue() != null) {
+                if (dataSnapshot.child("gender").getValue() != null) {
                     if (dataSnapshot.exists() && !dataSnapshot.child("connections").child("YUP").hasChild(currentuserId) && !dataSnapshot.child("connections").child("NOPE").hasChild(currentuserId) && dataSnapshot.child("gender").getValue().toString().equals(oppositeGender)) {
                         String profileImageUrl = "default";
                         if (!dataSnapshot.child("profileImageUrl").getValue().toString().equals("default")) {

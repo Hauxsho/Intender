@@ -10,13 +10,8 @@ public class Cards
     public Cards(String userID , String name ,String imageprofileURL) {
         this.userID = userID;
         this.name = name;
-        this.imageprofileURL=imageprofileURL;
+        this.imageprofileURL = imageprofileURL;
     }
-
-    public Cards() {
-
-    }
-
     public String getUserID() {
         return userID;
     }
