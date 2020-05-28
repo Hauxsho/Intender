@@ -71,6 +71,7 @@
             android:layout_height="90dp"
             android:fontFamily="@font/gandhi"
             android:hint="Email"
+            android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"></EditText>
 
         <EditText
@@ -80,6 +81,7 @@
             android:fontFamily="@font/gandhi"
             android:hint="Password : (AtLeast 6 digits)"
             android:inputType="textPassword"
+            android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF">
 
         </EditText>

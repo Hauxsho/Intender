@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private int i;
     private String currentuserId;
     private DatabaseReference usersDb;
-    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    private FirebaseAuth mAuth;
     private  String userGender, oppositeGender;
 
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         rowItems = new ArrayList<Cards>();
 
-        arrayAdapt = new ArrayAdapt(this, layout.item, rowItems);
+        arrayAdapt = new ArrayAdapt(this, R.layout.item, rowItems);
 
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
         flingContainer.setAdapter(arrayAdapt);
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()) {
-                    Toast.makeText(MainActivity.this, "new connection", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "It's a match", Toast.LENGTH_SHORT).show();
                     usersDb.child(dataSnapshot.getKey()).child("connections").child("Matches").child(currentuserId).setValue(true);
                     usersDb.child(currentuserId).child("connections").child("Matches").child(dataSnapshot.getKey()).setValue(true);
                 }
@@ -124,8 +124,8 @@ public class MainActivity extends AppCompatActivity {
         final FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
 
 
-        DatabaseReference userDb = usersDb.child(user.getUid());
-        usersDb.addListenerForSingleValueEvent(new ValueEventListener() {
+        DatabaseReference userDB = usersDb.child(user.getUid());
+        userDB.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {

@@ -56,6 +56,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/gandhi"
             android:hint="Name"
+            android:textColor="#FFFFFF"
             android:paddingTop="40dp"
             android:textColorHint="#FFFFFF"></EditText>
 

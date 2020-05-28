@@ -65,6 +65,7 @@
             android:layout_height="90dp"
             android:fontFamily="@font/gandhi"
             android:hint="Email"
+            android:textColor="#FFFFFF"
             android:inputType="textWebEmailAddress"
             android:textColorHint="#FFFFFF"></EditText>
 
@@ -72,6 +73,7 @@
             android:id="@+id/logPass"
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:textColor="#FFFFFF"
             android:fontFamily="@font/gandhi"
             android:hint="Password"
             android:inputType="textPassword"
