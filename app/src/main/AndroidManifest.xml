@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".items_chat"></activity>
+        <activity android:name=".Chat.ChatActivity" />
         <activity android:name=".Matches.Matches" />
         <activity android:name=".Settings" />
         <activity android:name=".Photos" />
