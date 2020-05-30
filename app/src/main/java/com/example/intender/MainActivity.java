@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.example.intender.Cards.ArrayAdapt;
 import com.example.intender.Cards.Cards;
 import com.example.intender.Matches.Matches;
-import com.example.intender.R.layout;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
             public void removeFirstObjectInAdapter()
             {
                 Log.d("LIST", "removed object!");
-                    rowItems.remove(0);
-                    arrayAdapt.notifyDataSetChanged();
+                rowItems.remove(0);
+                arrayAdapt.notifyDataSetChanged();
             }
 
             @Override
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
             public void onItemClicked(int itemPosition, Object dataObject) {
-                    Toast.makeText(MainActivity.this, "Click", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Click", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        }
+    }
 
 
     public void getGender()

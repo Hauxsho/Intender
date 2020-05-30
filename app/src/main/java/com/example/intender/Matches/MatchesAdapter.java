@@ -1,5 +1,4 @@
 package com.example.intender.Matches;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,9 +38,7 @@ class MatchesAdapter extends RecyclerView.Adapter<MatchesViewHolder>
     public void onBindViewHolder(MatchesViewHolder holder, int position) {
         holder.mMatchId.setText(matchesList.get(position).getUserId());
         holder.mMatchName.setText(matchesList.get(position).getName());
-        if(!matchesList.get(position).getProfileImageUrl().equals("default")){
             Glide.with(context).load(matchesList.get(position).getProfileImageUrl()).into(holder.mMatchImage);
-        }
     }
 
     @Override

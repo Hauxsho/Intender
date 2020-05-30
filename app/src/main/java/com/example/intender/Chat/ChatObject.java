@@ -1,28 +1,28 @@
 package com.example.intender.Chat;
 
 class ChatObject {
-    private String message;
-    private Boolean currentUser;
+        private String message;
+        private Boolean currentUser;
 
-    public ChatObject(String message, Boolean currentUser) {
-        this.message = message;
-        this.currentUser = currentUser;
-    }
+        public ChatObject(String message, Boolean currentUser) {
+            this.message = message;
+            this.currentUser = currentUser;
+        }
 
-    public String getMessage() {
-        return message;
-    }
+        public String getMessage() {
+            return message;
+        }
 
-    public void setMessage(String userID) {
-        this.message = message;
-    }
+        public void setMessage(String userID) {
+            this.message = message;
+        }
 
-    public Boolean getCurrentUser() {
-        return currentUser;
-    }
+        public Boolean getCurrentUser() {
+            return currentUser;
+        }
 
-    public void setCurrentUser(Boolean currentUser) {
-        this.currentUser = currentUser;
+        public void setCurrentUser(Boolean currentUser) {
+            this.currentUser = currentUser;
+        }
     }
-}
 

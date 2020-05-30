@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -91,15 +92,10 @@ public class Settings extends AppCompatActivity {
 
                     if (map.get("profileImageUrl") != null) {
                         profileImageUrl = map.get("profileImageUrl").toString();
-                        switch (profileImageUrl) {
-                            case "default":
-                                Glide.with(getApplication()).load(R.mipmap.ic_launcher).into(mImageOne);
-                                break;
-                            default:
-                                Glide.with(getApplication()).load(profileImageUrl).into(mImageOne);
-                                break;
-                        }
+                        RequestOptions options = new RequestOptions().centerCrop().placeholder(R.mipmap.ic_launcher_round).error(R.mipmap.ic_launcher_round);
+                        Glide.with(getApplication()).load(profileImageUrl).apply(options).into(mImageOne);
                     }
+
                 }
             }
 

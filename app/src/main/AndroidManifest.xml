@@ -17,15 +17,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".items_chat"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".Chat.ChatActivity" />
+
         <activity android:name=".Matches.Matches" />
         <activity android:name=".Settings" />
-        <activity android:name=".Photos" />
         <activity android:name=".University" />
         <activity android:name=".BirthDay" />
         <activity android:name=".Name" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".Choose">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

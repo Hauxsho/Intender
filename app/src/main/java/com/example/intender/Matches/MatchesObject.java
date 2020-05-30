@@ -3,9 +3,7 @@ package com.example.intender.Matches;
 public class MatchesObject {
 
 
-    private String userId;
-    private String name;
-    private String profileImageUrl;
+    private String userId,name,profileImageUrl;
     public MatchesObject (String userId, String name, String profileImageUrl){
         this.userId = userId;
         this.name = name;
