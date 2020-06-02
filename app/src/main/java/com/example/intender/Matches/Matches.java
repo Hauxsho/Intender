@@ -44,13 +44,13 @@ public class Matches extends AppCompatActivity {
     }
 
     private void getUserMatchId() {
-        DatabaseReference matchDb = FirebaseDatabase.getInstance().getReference().child("Users").child(cusrrentUserID).child("connections").child("matches");
+        DatabaseReference matchDb = FirebaseDatabase.getInstance().getReference().child("Users").child(cusrrentUserID).child("connections").child("Matches");
         matchDb.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    for (DataSnapshot match : dataSnapshot.getChildren()) {
-                        FetchMatchInformation(match.getKey());
+                    for (DataSnapshot Match : dataSnapshot.getChildren()) {
+                        FetchMatchInformation(Match.getKey());
                     }
                 }
             }

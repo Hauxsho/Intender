@@ -1,11 +1,10 @@
 public class Users
 {
-    public String nam,birth,phone,gender;
+    public String nam,birth,gender;
 
-    public Users(String nam, String birth, String phone, String gender) {
+    public Users(String nam, String birth, String gender) {
         this.nam = nam;
         this.birth = birth;
-        this.phone = phone;
         this.gender = gender;
     }
 
@@ -23,14 +22,6 @@ public class Users
 
     public void setBirth(String birth) {
         this.birth = birth;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getGender() {

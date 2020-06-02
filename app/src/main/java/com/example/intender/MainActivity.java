@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
                 Cards obj = (Cards)dataObject;
                 String userid = obj.getUserID();
                 usersDb.child(userid).child("connections").child("NOPE").child(currentuserId).setValue(true);
-                isConnectionMatch(userid);
                 Toast.makeText(MainActivity.this, "Left", Toast.LENGTH_SHORT).show();
             }
 
@@ -106,8 +105,10 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()) {
                     Toast.makeText(MainActivity.this, "It's a match", Toast.LENGTH_SHORT).show();
-                    usersDb.child(dataSnapshot.getKey()).child("connections").child("Matches").child(currentuserId).setValue(true);
-                    usersDb.child(currentuserId).child("connections").child("Matches").child(dataSnapshot.getKey()).setValue(true);
+                    String key = FirebaseDatabase.getInstance().getReference().child("Chat").push().getKey();
+
+                    usersDb.child(dataSnapshot.getKey()).child("connections").child("Matches").child(currentuserId).child("ChatId").setValue(true);
+                    usersDb.child(currentuserId).child("connections").child("Matches").child(dataSnapshot.getKey()).child("ChatId").setValue(true);
                 }
             }
 
@@ -160,13 +161,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 if (dataSnapshot.child("gender").getValue() != null) {
-                    if (dataSnapshot.exists() && !dataSnapshot.child("connections").child("YUP").hasChild(currentuserId) && !dataSnapshot.child("connections").child("NOPE").hasChild(currentuserId) && dataSnapshot.child("gender").getValue().toString().equals(oppositeGender)) {
+                    if (dataSnapshot.exists() && !dataSnapshot.child("connections").child("NOPE").hasChild(currentuserId) && !dataSnapshot.child("connections").child("YUP").hasChild(currentuserId) && dataSnapshot.child("gender").getValue().toString().equals(oppositeGender)) {
                         String profileImageUrl = "default";
-                        if (!dataSnapshot.child("profileImageUrl").getValue().toString().equals("default")) {
+                        if (!dataSnapshot.child("profileImageUrl").getValue().equals("default")) {
                             profileImageUrl = dataSnapshot.child("profileImageUrl").getValue().toString();
                         }
-                        Cards Item = new Cards(dataSnapshot.getKey(), dataSnapshot.child("name").getValue().toString(), profileImageUrl);
-                        rowItems.add(Item);
+                        Cards item = new Cards(dataSnapshot.getKey(), dataSnapshot.child("name").getValue().toString(), profileImageUrl);
+                        rowItems.add(item);
                         arrayAdapt.notifyDataSetChanged();
                     }
                 }
